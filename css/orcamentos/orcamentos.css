@@ -1,0 +1,169 @@
+#orcamento {
+  background: linear-gradient(var(--cor-11) 600px, var(--cor-1) 0px);
+}
+
+.orcamento {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  padding-bottom: 120px;
+}
+
+.orcamento h2 {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.orcamento h2::before {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 4px;
+  background-color: var(--cor-p1);
+}
+
+.orcamento-produto {
+  background: var(--cor-12);
+  border-radius: 5px 0 0 5px;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  gap: 20px;
+}
+
+.orcamento-produto label {
+  background: var(--cor-10);
+  padding: 16px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  border: 1px solid var(--cor-12);
+}
+
+.orcamento-produto label:hover {
+  background: var(--cor-9);
+  cursor: pointer;
+}
+
+.orcamento-produto > * {
+  grid-column: 1 / -1;
+}
+
+.orcamento-produto > label {
+  grid-column: initial;
+}
+
+.orcamento-produto input:checked + label {
+  background: var(--cor-1);
+  color: var(--cor-11);
+  box-shadow: 0 0 0 2px var(--cor-p1);
+}
+
+.orcamento-produto label::before {
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border: 1px solid var(--cor-7);
+  box-sizing: border-box;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.orcamento-produto input:checked + label::before {
+  box-shadow: inset 0 0 0 3px var(--cor-0), inset 0 0 0 6px var(--cor-8);
+}
+
+.orcamento-produto span {
+  display: none;
+}
+
+.orcamento-produto input:checked + label span {
+  display: inline-block;
+}
+
+.orcamento-produto input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.orcamento-conteudo {
+  display: none;
+}
+
+.orcamento-conteudo > * {
+  margin-top: 20px;
+}
+
+.orcamento-dados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.orcamento-dados h2,
+.expande {
+  grid-column: span 2;
+}
+
+#bikcraft:checked ~ #orcamento-bikcraft,
+#seguro:checked ~ #orcamento-seguro {
+  display: block;
+}
+
+.orcamento-detalhe {
+  background: var(--cor-0);
+  padding: 20px;
+  border-radius: 4px;
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.orcamento-detalhe li {
+  display: flex;
+  gap: 8px;
+}
+
+.orcamento-detalhe ul {
+  display: grid;
+  gap: 10px;
+}
+
+.orcamento-detalhe ul img {
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.orcamento-conteudo input:checked + label + .orcamento-detalhe {
+  display: grid;
+}
+
+@media (max-width: 1100px) {
+  .orcamento-dados {
+    padding: 30px;
+  }
+  .orcamento-produto {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .orcamento {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .orcamento-dados * {
+    grid-column: 1 /-1;
+  }
+  .orcamento-produto {
+    grid-template-columns: 1fr;
+  }
+}
