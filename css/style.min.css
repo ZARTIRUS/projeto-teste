@@ -87,7 +87,7 @@ span {
   .header-flex {
     justify-content: center;
   }
-  .header-list {
+  .header-list a {
     font-size: 0.75rem;
   }
 }
@@ -763,7 +763,7 @@ span {
 .seguro li::before {
   content: "";
   display: inline-block;
-  background-image: url(../../img/icones/lista.svg);
+  background-image: url("../../img/icones/lista.svg");
   width: 13px;
   height: 9px;
   position: absolute;
@@ -815,7 +815,7 @@ span {
 .perguntas dt::after {
   content: "";
   display: inline-block;
-  background: url(../../img/icones/seta-abrir.svg);
+  background: url("../../img/icones/seta-abrir.svg");
   height: 6px;
   width: 14px;
   transition: 0.3s;
@@ -1035,7 +1035,7 @@ span {
 .botao.seta::after {
   content: "";
   display: inline-block;
-  background: url(../../img/icones/seta.svg);
+  background: url("../../img/icones/seta.svg");
   width: 18px;
   height: 10px;
   margin-left: 12px;
