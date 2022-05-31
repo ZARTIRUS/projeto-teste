@@ -45,7 +45,7 @@
 .botao.seta::after {
   content: "";
   display: inline-block;
-  background: url(../../img/icones/seta.svg);
+  background-image: url(../../img/icones/seta.svg);
   width: 18px;
   height: 10px;
   margin-left: 12px;

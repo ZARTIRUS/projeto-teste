@@ -98,6 +98,10 @@
     grid-column: 1 / -1;
   }
 
+  .bicicletaspg-2 a {
+    grid-column: span 2;
+  }
+
   .bicicletaspg-2 ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
